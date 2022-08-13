@@ -1,14 +1,15 @@
 import React, { Component, Button } from 'react'
 
 
-export default class Dashboard extends Component {
-    render() {
-        
+const Dashboard = (props) => {
+    
         return (
+         
         <div>
-            <h1>Dashboard</h1>
-
+            <h4>{props.temp}</h4>
+            
         </div>
     )
   }
-}
+
+  export default Dashboard;

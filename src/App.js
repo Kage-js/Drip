@@ -9,14 +9,16 @@ function App() {
   const [city, setCity] = useState('');
 
   const getWeather = async () => {
+    const API_KEY= 0;  
     const response = await fetch(`http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/02136?apikey=${API_KEY}`);
     const data = await response.json();
     setWeather(currentList => [...currentList, data]);
     setCity('Boston');
+    debugger
     
     weather[0].map((forcast, index) => (    
       console.log(forcast)
-      
+    
     ))
   }
   useEffect(() => {
@@ -25,7 +27,14 @@ function App() {
 
   return (
     <div className="App">
-      <Dashboard weather={weather[0]} city={city} />
+        {weather[0].map((forcast,index) => (
+          <Dashboard 
+            key={index}
+            temp={forcast.Temperature.Value}
+            icon={forcast.WeatherIcon}  
+          />
+        ))}
+       
       {city}
     </div>
   );
