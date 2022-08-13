@@ -17,8 +17,7 @@ function App() {
     debugger
     
     weather[0].map((forcast, index) => (    
-      console.log(forcast)
-    
+      console.log(forcast) 
     ))
   }
   useEffect(() => {
@@ -33,8 +32,7 @@ function App() {
             temp={forcast.Temperature.Value}
             icon={forcast.WeatherIcon}  
           />
-        ))}
-       
+        ))} 
       {city}
     </div>
   );
