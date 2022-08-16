@@ -20,8 +20,7 @@ function App() {
   }
 
   useEffect(() => {
-      getWeather()
-    
+      getWeather()  
   },[]);
   
 
