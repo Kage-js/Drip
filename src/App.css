@@ -4,9 +4,15 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: 
+    "search-bar search-bar search-bar"
     "city city city"
     "weather weather weather"
   ; 
+}
+
+.search-bar{
+  grid-area: search-bar;
+  text-align: center;
 }
 
 .weather-bar {
