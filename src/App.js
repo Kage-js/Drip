@@ -1,8 +1,6 @@
- 
 import { useEffect, useState } from 'react';
 import './App.css';
 import WeatherBar from './components/layouts/WeatherBar';
-import ZipCodeBar from './components/layouts/ZipCodeBar';
 
 function App() {
   const [weather, setWeather] = useState([]);
@@ -38,7 +36,6 @@ function App() {
                     />
             </form>
         </div>
-        {console.log("the zipcode is"+ zipCodeInput)}
       </div>
       <div className='city'>
         <p>{city}</p>
@@ -53,9 +50,7 @@ function App() {
             city={city}
           />
         ))} 
-        {console.log(zipCodeInput)}
       </div>
-
     </div>
   );
 }
